@@ -1,5 +1,5 @@
 # Screenshot management
-The simplest PowerShell script written for managing your screenshots folder.
+The simplest PowerShell script for managing your screenshots.
 
 # Use case
 Do you capture and share screenshots regularly? If the answer to that question is positive, you probably have encountered some issues in the past.
