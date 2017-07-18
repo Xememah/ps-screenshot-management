@@ -5,7 +5,7 @@
 # Core PATH for screenshots
 $mainDirectory = "Example\Directory\For\Screenshots"
 
-# Optional: The script will look for screenshots in this directory
+# Optional: The script will look for screenshots in this directory in current session
 $workingDirectory = $mainDirectory
 
 # A directory for archiving screenshots from previous sessions
@@ -38,7 +38,7 @@ ForEach ($file in $filesToMove) {
 		New-Item -ItemType Directory -Force -Path $path | Out-Null
 	}
 
-	# Fetching the highest index number of an archived screenshot 
+	# Fetching the highest index number of all archived screenshots 
 	$getLast = Get-ChildItem -Path $path -File | sort {$_.BaseName -replace "\D+" -as [Int]} | Select-Object -Last 1
 
 	# Checking whether the targeted folder contains other screenshots
