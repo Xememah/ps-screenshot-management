@@ -2,7 +2,7 @@
 The simplest PowerShell script written for managing your screenshots folder.
 
 # Use case
-Do you capture and share screenshots regularly? If the answear to that question is positive, you probably have encountered some issues in the past.
+Do you capture and share screenshots regularly? If the answer to that question is positive, you probably have encountered some issues in the past.
 
 You take one screenshot, use it two or three times and that's it. The screenshot is no longer needed.
 
@@ -11,9 +11,9 @@ And when you want to share it? The problem emerges when you have *thousands* of 
 This script in combination with Windows' *Task Scheduler* allows for creating sessions for screenshot sharing by archiving no longer needed files.
 
 # How the script works
-Insted of running in the background and actively monitoring the directory all the time, the `task.ps1` script is run only once when a new session needs to be initialized.
+Instead of running in the background and actively monitoring the directory all the time, the `task.ps1` script is run only once when a new session needs to be initialized.
 
-Once the `task.ps1` is run, it takes every image in `$workingDirectory`, saves the images' `LastWriteTime` and archives it under `$archiveDirectory` within a subfolder of a current year. The file is renamed to a numerical index and the file extension is standarized to avoid conflicts.
+Once the `task.ps1` is run, it takes every image in `$workingDirectory`, saves the images' `LastWriteTime` and archives it under `$archiveDirectory` within a subfolder of a current year. The file is renamed to a numerical index and the file extension is standardized to avoid conflicts.
 
 ### Example
 ![Working directory](screenshots/1-working.png)
@@ -27,12 +27,12 @@ Because you already have archived a total number of **555** screenshots in the y
 
 ![Saved file](screenshots/3-saved.png)
 
-Saving files with `.PNG` instead of `.png` is the default behaviour of **Windows Snipping Tool** and the script helps with unifying your image files extensions.
+Saving files with `.PNG` instead of `.png` is the default behavior of **Windows Snipping Tool** and the script helps with unifying your image files extensions.
 
 # Configuration
 The script has three configurable path variables:
 `$mainDirectory`, `$workingDirectory` and `$archiveDirectory`.
-By defualt, the `$workingDirectory` is the same as `$mainDirectory`, but you are free to change this settings.
+By default, the `$workingDirectory` is the same as `$mainDirectory`, but you are free to change this setting.
 
 ### Example
 ```
